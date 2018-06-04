@@ -1,0 +1,147 @@
+.waves-effect.waves-blue .waves-ripple {
+  background-color: #80cbc4; }
+
+.font-1 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 300; }
+
+.font-2 {
+  font-family: 'IBM Plex Mono', serif;
+  font-weight: 400; }
+
+p {
+  font-weight: 300; }
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column; }
+  body main {
+    flex: 1 0 auto; }
+
+.sidenav li a {
+  font-size: 20px; }
+
+nav {
+  position: relative;
+  height: 3.5em; }
+  nav h1 {
+    margin: 0;
+    top: -0.135em;
+    position: relative; }
+  nav .brand-logo {
+    display: inline;
+    font-size: 30px; }
+    @media (min-width: 768px) {
+      nav .brand-logo {
+        margin-left: 0.5em; } }
+    nav .brand-logo .subheading {
+      font-size: 15px;
+      position: relative;
+      display: inline-block;
+      height: 100%;
+      line-height: 1em;
+      font-weight: 300;
+      left: -0.5em;
+      top: 0.05em; }
+      @media (min-width: 768px) {
+        nav .brand-logo .subheading {
+          left: 0; } }
+  nav .icon {
+    position: relative;
+    left: 0.8em; }
+    @media (min-width: 768px) {
+      nav .icon {
+        top: -0.15em; } }
+  nav .nav-mobile li a {
+    font-size: 17px;
+    position: relative;
+    bottom: 0.3em; }
+  nav .nav-mobile li .nav-active {
+    color: #b2dfdb; }
+  nav .nav-mobile li a:hover {
+    background-color: inherit;
+    color: #80cbc4; }
+
+.logo {
+  max-width: 3em;
+  top: 0.1em;
+  margin: 0;
+  position: relative;
+  display: block;
+  margin-left: 0.5em; }
+  @media (min-width: 768px) {
+    .logo {
+      max-width: 2em;
+      left: -0.5em;
+      display: inline; } }
+
+.page-header {
+  width: 100%;
+  position: relative;
+  top: -1em; }
+  .page-header h1 {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 300;
+    padding: 0.8em; }
+
+.cont-block {
+  margin: 6em -0.5em;
+  padding: 1.5em;
+  border-radius: 5px 5px 5px 5px; }
+  @media (min-width: 768px) {
+    .cont-block {
+      margin: 6em 0;
+      padding: 4em;
+      padding-top: 2.5em; } }
+  @media (min-width: 1024px) {
+    .cont-block {
+      margin: 6em 4.5em; } }
+  .cont-block h2 {
+    padding-bottom: 0.5em;
+    font-size: 24px;
+    line-height: 110%;
+    margin: 1.52rem 0 .912rem 0; }
+  .cont-block p {
+    font-size: 16px;
+    padding-bottom: 1em; }
+    .cont-block p i {
+      padding: 0.2em; }
+    .cont-block p a {
+      color: #07809b; }
+    .cont-block p a:hover {
+      color: #38aec9; }
+    .cont-block p em {
+      text-decoration: underline;
+      font-style: normal; }
+  .cont-block .cont-paragraph ul li .collapsible-header {
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 1rem;
+    margin: 0; }
+
+#cont-block-1 {
+  margin-top: 4em; }
+  @media (min-width: 768px) {
+    #cont-block-1 {
+      margin-top: 6em; } }
+
+.page-footer {
+  padding: 0; }
+  .page-footer .row {
+    margin: 0;
+    font-size: 12px;
+    padding-left: 0.8em;
+    padding-right: 0.8em; }
+    .page-footer .row ul h2 {
+      font-size: 12px;
+      margin: 0; }
+    .page-footer .row ul li {
+      line-height: 2em; }
+      .page-footer .row ul li a {
+        color: black; }
+      .page-footer .row ul li .link-colgro {
+        color: #b71c1c; }
+      .page-footer .row ul li a:hover {
+        text-decoration: underline; }
