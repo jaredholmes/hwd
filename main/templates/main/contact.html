@@ -1,0 +1,33 @@
+{% extends 'main/base.html' %}
+
+{% block meta-description %}
+  <meta name="description" content="Holmes Web Development offers various web design and development services aimed at accelerating business growth online.">
+{% endblock %}
+
+{% block title %}Contact Details and Pricing | Holmes Web Development{% endblock %}
+
+{% block nav-which-active %}
+  <li><a href="{% url 'main:index' %}">Home</a></li>
+  <li><a href="{% url 'main:services' %}">Services</a></li>
+  <li><a href="{% url 'main:contact' %}" class="nav-active">Contact & Pricing</a></li>
+{% endblock %}
+
+{% block page-header %}
+  <h1 class="blue-grey lighten-3 font-2">Contact Details & Pricing</h1>
+{% endblock %}
+
+{% block main %}
+<div class="cont-block grey lighten-4 black-text" id="cont-block-1">
+  <h2 class="font-2 teal-text text-darken-1">Contact Me</h2>
+  <div class="cont-paragraph" id="cont-paragraph-1">
+    <p>E-mail: <a href="mailto: webmate@colgro.com">jared@colgro.com</a></p>
+  </div>
+</div>
+
+<div class="cont-block grey lighten-4 black-text">
+  <h2 class="font-2 teal-text text-darken-1">Pricing</h2>
+  <div class="cont-paragraph" id="cont-paragraph-1">
+    <p>The web development aspects listed in the <a href="{% url 'main:services' %}">services page</a> vary in complexity and price. Since each project is unique, quotes will be calculated after establishing your specific requirements. In order to gauge your requirements, an initial meeting can be held to discuss your requirements, <em>free of charge</em>. This can be done remotely or face-to-face.</p>
+  </div>
+</div>
+{% endblock %}
