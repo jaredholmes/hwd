@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 
 import os
 import django_heroku
+import dj_database_url
+# import psycopg2
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -21,11 +23,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'secret'
-# SECRET_KEY = os.environ.get('SECRET_KEY')
+# SECRET_KEY = 'secret'
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -78,11 +80,18 @@ WSGI_APPLICATION = 'jh.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgresql-reticulated-48279',
+        'USER': 'xojiwlclhinvhh',
+        'PASSWORD': 'c6bd723dc05eb99cd595e6d0fa56eb1a9ad75f966114e6ece6affe6e692ecb38',
+        'HOST': 'ec2-23-21-129-50.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
+    # DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
 }
 
+# DATABASE_URL = os.eviron['DATABASE_URL']
+# conn = psycopg2.connect(DATABASE_URL, sslmode='require')
 
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
