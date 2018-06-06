@@ -1,1 +1,6 @@
 {% extends 'main/base.html' %}
+
+{% block extra-links %}
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'main/stylesheets/magic.min.css' %}">
+{% endblock %}
