@@ -78,17 +78,16 @@ WSGI_APPLICATION = 'jh.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'postgresql-reticulated-48279',
-#         'USER': 'xojiwlclhinvhh',
-#         'PASSWORD': 'c6bd723dc05eb99cd595e6d0fa56eb1a9ad75f966114e6ece6affe6e692ecb38',
-#         'HOST': 'ec2-23-21-129-50.compute-1.amazonaws.com',
-#         'PORT': '5432',
-#     }
-# }
-DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgresql-reticulated-48279',
+        'USER': 'xojiwlclhinvhh',
+        'PASSWORD': 'c6bd723dc05eb99cd595e6d0fa56eb1a9ad75f966114e6ece6affe6e692ecb38',
+        'HOST': 'ec2-23-21-129-50.compute-1.amazonaws.com',
+        'PORT': '5432',
+    }
+}
 
 # DATABASE_URL = os.eviron['DATABASE_URL']
 # conn = psycopg2.connect(DATABASE_URL, sslmode='require')
@@ -128,6 +127,8 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
+
+DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
 
 STATIC_URL = '/static/'
 django_heroku.settings(locals())
