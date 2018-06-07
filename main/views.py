@@ -27,6 +27,7 @@ def contact(request):
                 message=data['message'],
                 time=datetime.now()
             )
+            m.save()
 
             # Email arguments
             subject = 'Message on Holmes Web Development from %s' % (m.sender_name)
