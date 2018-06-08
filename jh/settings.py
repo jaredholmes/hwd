@@ -85,10 +85,14 @@ WSGI_APPLICATION = 'jh.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('DB_NAME'),
-        'USER': os.environ.get('DB_USER'),
-        'PASSWORD':  os.environ.get('DB_PASSWORD'),
-        'HOST': os.environ.get('DB_HOST'),
+        # 'NAME': os.environ.get('DB_NAME'),
+        # 'USER': os.environ.get('DB_USER'),
+        # 'PASSWORD':  os.environ.get('DB_PASSWORD'),
+        # 'HOST': os.environ.get('DB_HOST'),
+        'NAME': 'postgresql-reticulated-48279',
+        'USER': 'xojiwlclhinvhh',
+        'PASSWORD':  'c6bd723dc05eb99cd595e6d0fa56eb1a9ad75f966114e6ece6affe6e692ecb38',
+        'HOST': 'ec2-23-21-129-50.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 }
