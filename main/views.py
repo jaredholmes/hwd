@@ -1,9 +1,5 @@
-# TODO: Change settings back for production
-# TODO: Instead of thank you, redirect to special thank you home page
-from datetime import datetime
-
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.core.mail import send_mail
 
 from .forms import MessageForm
@@ -27,33 +23,36 @@ def contact(request):
                 message=data['message'],
                 time=datetime.now()
             )
-            m.save()
+            if m.sender_name != '' \
+            and m.sender_email != '' \
+            and m.message != '':
+                m.save()
 
-            # Email arguments
-            subject = 'Message on Holmes Web Development from %s' % (m.sender_name)
+                # Email arguments
+                subject = 'Message on Holmes Web Development from %s' % (m.sender_name)
 
-            intro = (
-            '''
-            Sent: %s
+                intro = (
+                '''
+                Sent: %s
 
-            From: %s
+                From: %s
 
-            Email: %s \n\n
-            ''' % (m.time, m.sender_name, m.sender_email))
+                Email: %s \n\n
+                ''' % (m.time, m.sender_name, m.sender_email))
 
-            content = m.message
+                content = m.message
 
-            try:
-                send_mail(
-                    subject,
-                    (intro + content),
-                    'jar3dh0lm3s@gmail.com',
-                    ['jared@colgro.com'],
-                    fail_silently=False
-            )
-            except:
-                return HttpResponse('Unfortunately there was an error. Please retry. If you continue to see this message, please send the message via email instead.')
-            return HttpResponse('Thank you for your message.')
+                try:
+                    send_mail(
+                        subject,
+                        (intro + content),
+                        'jar3dh0lm3s@gmail.com',
+                        ['jared@colgro.com'],
+                        fail_silently=False
+                )
+                except:
+                    return render(request, 'main/contact-failed.html', context = { 'form' : form })
+                return render(request, 'main/contact-thanks.html', context = { 'form' : form })
 
     else: form = MessageForm()
 
