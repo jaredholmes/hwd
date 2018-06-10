@@ -11,6 +11,9 @@ from .models import Message
 def lets_encrypt(request):
     return HttpResponse('iG4DmbUu18tATgXkFPUe8E7_C8LiVcqnt8z5heY1yOc.zzdPXFw8kv_VxVurJVYAgN9kz0XrJg_kd0Uut6DdXwU')
 
+def lets_encrypt_2(request):
+    return HttpResponse('W1AzD_lSSMDgN5oRe5U-qkuYOz562tFsi_RQZsfq7X8.zzdPXFw8kv_VxVurJVYAgN9kz0XrJg_kd0Uut6DdXwU')
+
 def index(request):
     return render(request, 'main/index.html')
 
