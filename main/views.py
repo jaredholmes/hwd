@@ -40,12 +40,11 @@ def contact(request):
                 subject = 'Message on Holmes Web Development from %s' % (m.sender_name)
 
                 intro = (
-                '''
-                Sent: %s
+                '''Sent: %s
 
-                From: %s
+From: %s
 
-                Email: %s \n\n
+Email: %s \n\n
                 ''' % (m.time, m.sender_name, m.sender_email))
 
                 content = m.message
