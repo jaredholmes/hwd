@@ -20,46 +20,49 @@
   <h1 class="font-2">Contact Details & Pricing</h1>
 {% endblock %}
 
+{% block cover-image %}
+{% endblock %}
+
 {% block main %}
-<div class="cont-block grey lighten-4 black-text">
-  <h2 class="font-2 teal-text text-darken-1">Pricing</h2>
+<div class="cont-block">
+  <h2 class="font-2 bright-blue-text">Pricing</h2>
   <div class="cont-paragraph" id="cont-paragraph-1">
     <p>The web development aspects listed in the <a href="{% url 'main:services' %}">services page</a> vary in complexity and price. Since each project is unique, quotes will be calculated after establishing your specific requirements. In order to gauge your requirements, an initial meeting can be held to discuss your requirements, <em>free of charge</em>. This can be done remotely or face-to-face.</p>
   </div>
 </div>
 
-<div class="cont-block grey lighten-4 black-text">
-  <h2 class="font-2 teal-text text-darken-1">Send a Message</h2>
+<div class="cont-block">
+  <h2 class="font-2 bright-blue-text">Send a Message</h2>
   <div class="cont-paragraph" id="cont-paragraph-1">
     <p>If you have any comments, questions or requests feel free to let me know here.</p>
   </div>
   <form class="new-message" action="" method="post">
     {% csrf_token %}
       <div class="form-area input-field">
-        <i class="far fa-user-circle prefix grey-text text-darken-3"></i>
-        <label for="id_name" class="grey-text text-darken-2">Name </label>
+        <i class="far fa-user-circle prefix"></i>
+        <label for="id_name">Name </label>
         {{ form.sender_name }}
       </div>
       <div class="form-area input-field">
-        <i class="fas fa-at prefix grey-text text-darken-3"></i>
-        <label for="id_email" class="grey-text text-darken-2">Email address </label>
+        <i class="fas fa-at prefix"></i>
+        <label for="id_email">Email address </label>
         {{ form.sender_email }}
       </div>
       <div class="form-area input-field">
-        <i class="fas fa-pencil-alt prefix grey-text text-darken-3"></i>
-        <label for="id_message" class="grey-text text-darken-2">Your message </label>
+        <i class="fas fa-pencil-alt prefix"></i>
+        <label for="id_message">Your message </label>
         {{ form.message }}
       </div>
       <div class="right-align">
-        <button type="submit" name="" class="btn waves-effect waves-blue teal accent-3 black-text" id="btn-submit">Send &nbsp;<i class="far fa-paper-plane fa-xs"></i></button>
+        <button type="submit" name="" class="btn waves-effect waves-blue bright-blue" id="btn-submit">Send &nbsp;<i class="far fa-paper-plane fa-xs"></i></button>
       </div>
   </form>
 </div>
 
-<div class="cont-block grey lighten-4 black-text" id="cont-block-1">
-  <h2 class="font-2 teal-text text-darken-1">Contact Me</h2>
+<div class="cont-block" id="cont-block-1">
+  <h2 class="font-2 bright-blue-text">Contact Me</h2>
   <div class="cont-paragraph" id="cont-paragraph-1">
-    <p>E-mail: <a href="mailto: webmate@colgro.com">jared@colgro.com</a></p>
+    <p>E-mail: <a href="mailto: jared@colgro.com">jared@colgro.com</a></p>
   </div>
 </div>
 {% endblock %}

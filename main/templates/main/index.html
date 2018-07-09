@@ -1,6 +1,18 @@
 {% extends 'main/base.html' %}
-
-{% block extra-links %}
-  {% load static %}
-  <link rel="stylesheet" href="{% static 'main/stylesheets/magic.min.css' %}">
+{% load static %}
+{% load render_bundle from webpack_loader %}
+{% block cover-image %}
+<div class="cover-image">
+  <img id="cover" width="100%" alt="" src="{% static 'main/src/images/background.jpeg' %}">
+  <div class="slogan">
+    <h2 id="slogan-1" class="animated"><a href="#" class="charcoal-text"><img src="https://png.icons8.com/ios/50/434343/source-code.png" class="slogan-icon">&nbsp; High-quality, bespoke website design</a></h2>
+  </div>
+</div>
+<div class="blender"></div>
+{% endblock %}
+{% block extra-footer %}
+<li><a href="https://icons8.com">Icon pack by Icons8</a></li>
+{% endblock %}
+{% block extra-scripts %}
+{% render_bundle 'animate' %}
 {% endblock %}

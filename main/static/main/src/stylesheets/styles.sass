@@ -1,0 +1,293 @@
+// Screen sizes for queries
+$tablet: 768px
+$desktop: 1024px
+
+// Colours
+$light-grey: #EFEFEF
+$mid-grey: #E4E4E4
+$logo-blue: #00A0A2
+$bright-blue: #007677
+$dark-blue: #1D7879
+$charcoal: #434343
+
+$link-colour: #07809b
+$link-hover-colour: #38aec9
+$teal-dark: #80cbc4
+$teal-light: #a4bcb9
+
+$brand-logo-offset: 0.1em
+
+// Media query mixins
+@mixin media-tablet
+  @media (min-width: #{$tablet})
+    @content
+
+@mixin media-desktop
+  @media (min-width: #{$desktop})
+    @content
+
+.light-grey
+  background-color: $light-grey
+
+.bright-blue-text
+  color: $bright-blue
+
+.logo-blue-text
+  color: $logo-blue
+
+.bright-blue
+  background-color: $bright-blue
+
+.charcoal-text
+  color: $charcoal
+
+.mid-grey
+  background-color: $mid-grey
+
+.waves-effect.waves-blue .waves-ripple
+    background-color: $teal-dark
+
+// .font-1
+//   font-family: 'IBM Plex Sans', sans-serif
+//   font-weight: 300
+//
+// .font-2
+//   font-family: 'IBM Plex Mono', serif
+//   font-weight: 400
+
+.font-1, .font-2
+  font-family: 'Raleway', sans-serif
+
+p
+  font-weight: 300
+
+body
+  display: flex
+  min-height: 100vh
+  flex-direction: column
+
+  main
+    flex: 1 0 auto
+
+.sidenav
+
+  li a
+    font-size: 20px
+
+nav
+  position: relative
+  height: 3.5em
+
+  ul
+
+    a
+      color: $charcoal
+
+  h1
+    margin: 0
+    top: -0.135em
+    position: relative
+
+  .brand-logo
+    color: $bright-blue
+    display: inline
+    font-size: 31px
+    position: relative
+    left: 0.4em
+    margin-bottom: 0.3em
+
+    .logo
+      height: 36px
+      position: relative
+      top: 7px
+
+      @include media-tablet
+        height: 42px
+        top: 9px
+
+    .subheading
+      font-size: 13px
+      position: relative
+      display: inline-block
+      height: 100%
+      line-height: 1em
+      font-weight: 300
+
+      // top: $brand-logo-offset + 0.5em
+
+      @include media-tablet
+        left: 0
+
+  .icon
+    position: relative
+    left: 0.8em
+
+    @include media-tablet
+      bottom: -0.15em
+
+  .nav-mobile
+
+    li
+
+      a
+        font-size: 17px
+        position: relative
+        bottom: 0.3em
+
+      .nav-active
+        color: $dark-blue
+
+      a:hover
+        background-color: inherit
+        color: $logo-blue
+
+.page-header
+  width: 100%
+  position: relative
+  top: -2.5em
+  background: rgb(245,244,244);
+  background: -moz-linear-gradient(90deg, rgba(245,244,244,1) 0%, rgba(227,227,227,1) 100%);
+  background: -webkit-linear-gradient(90deg, rgba(245,244,244,1) 0%, rgba(227,227,227,1) 100%);
+  background: linear-gradient(90deg, rgba(245,244,244,1) 0%, rgba(227,227,227,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f5f4f4",endColorstr="#e3e3e3",GradientType=1);
+
+  h1
+    margin: 1em 0
+    font-size: 26px
+    font-weight: 300
+    padding: 2em
+
+.cover-image
+  position: relative
+
+#cover
+  position: relative
+
+  @include media-desktop
+    bottom: 5em
+
+.slogan
+  position: absolute
+  top: 20%
+  left: 1.6em
+  width: 55%
+
+  h2
+    font-size: 2.5em
+
+    @include media-tablet
+      font-size: 2.5em
+
+    @include media-desktop
+      font-size: 3.56em
+
+    a
+      font-weight: 300
+
+    .slogan-icon
+      position: relative
+      top: 6px
+
+.blender
+  height: 18em
+  width: 100%
+  bottom: 1em
+  z-index: -50
+  position: relative
+  background: rgb(226,226,226);
+  background: -moz-linear-gradient(180deg, rgba(226,226,226,1) 0%, rgba(239,239,239,1) 100%);
+  background: -webkit-linear-gradient(180deg, rgba(226,226,226,1) 0%, rgba(239,239,239,1) 100%);
+  background: linear-gradient(180deg, rgba(226,226,226,1) 0%, rgba(239,239,239,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e2e2e2",endColorstr="#efefef",GradientType=1);
+
+  @include media-desktop
+    height: 5em
+    bottom: 6em
+
+.cont-block
+  margin: 1em -0.5em
+  padding: 1.5em
+  border-radius: 5px 5px 5px 5px
+
+  @include media-tablet
+    margin: 0
+    padding: 4em
+    padding-top: 2.5em
+
+  @include media-desktop
+    margin: 0 4.5em
+
+  h2
+    padding-bottom: 0.5em
+    font-size: 24px
+    line-height: 110%
+    margin: 1.52rem 0 .912rem 0
+
+  p
+    font-size: 16px
+    padding-bottom: 1em
+
+    i
+      padding: 0.2em
+
+    a
+      color: $link-colour
+
+    a:hover
+      color: $link-hover-colour
+
+    em
+      text-decoration: underline
+      font-style: normal
+
+  .cont-paragraph ul li .collapsible-header
+    font-size: 16px
+    line-height: 1.5
+    padding: 1rem
+    margin: 0
+
+    .services-icon
+      max-height: 25px
+      position: relative
+      bottom: 2px
+      padding-right: 1em
+
+  .collapsible-body
+    padding: 1em
+
+    @include media-desktop
+      padding: 2em
+
+#btn-submit
+  margin-top: 1em
+
+label
+  font-size: 13px
+
+.page-footer
+  padding: 0
+  margin-top: 5em
+
+  .row
+    margin: 0
+    font-size: 12px
+    padding-left: 0.8em
+    padding-right: 0.8em
+
+    ul
+
+      h2
+        font-size: 12px
+        margin: 0
+
+      li
+        line-height: 2em
+
+        a
+          color: black
+
+        .link-colgro
+          color: #b71c1c
+
+        a:hover
+          text-decoration: underline
