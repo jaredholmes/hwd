@@ -87,23 +87,27 @@ nav
     margin: 0
     top: -0.135em
     position: relative
+    @include media-tablet
+      left: 0.1em
 
   .brand-logo
     color: $bright-blue
     display: inline
-    font-size: 31px
+    font-size: 34px
     position: relative
     left: 0.4em
     margin-bottom: 0.3em
 
     .logo
-      height: 36px
+      height: 25px
       position: relative
-      top: 7px
+      left: 2px
 
       @include media-tablet
-        height: 42px
-        top: 9px
+        height: 35px
+        top: 5px
+        left: 0
+        right: 8px
 
     .subheading
       font-size: 13px
@@ -121,6 +125,8 @@ nav
   .icon
     position: relative
     left: 0.8em
+    top: 0.4em
+    height: 30px
 
     @include media-tablet
       bottom: -0.15em
@@ -186,7 +192,11 @@ nav
 
     .slogan-icon
       position: relative
+      height: 37px
       top: 6px
+
+      @include media-tablet
+        height: 50px
 
 .blender
   height: 18em

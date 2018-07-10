@@ -3,9 +3,9 @@
 {% load render_bundle from webpack_loader %}
 {% block cover-image %}
 <div class="cover-image">
-  <img id="cover" width="100%" alt="" src="{% static 'main/src/images/background.jpeg' %}">
+  <img id="cover" width="100%" alt="Holmes Web Development" src="{% static 'main/src/images/background.jpeg' %}">
   <div class="slogan">
-    <h2 id="slogan-1" class="animated"><a href="#" class="charcoal-text"><img src="https://png.icons8.com/ios/50/434343/source-code.png" class="slogan-icon">&nbsp; High-quality, bespoke website design</a></h2>
+    <h2 id="slogan-1" class="animated"><a href="{% url 'main:services' %}" class="charcoal-text"><img src="{% static 'main/src/icons/icon-coding.png' %}" alt="web design" class="slogan-icon">&nbsp; High-quality, bespoke website design</a></h2>
   </div>
 </div>
 <div class="blender"></div>
@@ -15,4 +15,30 @@
 {% endblock %}
 {% block extra-scripts %}
 {% render_bundle 'animate' %}
+<script type="text/javascript">
+  var timeout = function(i) {
+    var text = [
+      "<a href='{% url 'main:services' %}' class='charcoal-text'><img src='{% static 'main/src/icons/icon-ux.png' %}' alt='UX and UI' class='slogan-icon'>&nbsp; Attractive and intuitive UI and UX design</a>",
+      "<a href='{% url 'main:services' %}' class='charcoal-text'><img src='{% static 'main/src/icons/icon-database.png' %}' alt='Web application design' class='slogan-icon'>&nbsp; Robust, performant web application development</a>",
+      "<a href='{% url 'main:services' %}' class='charcoal-text'><img src='{% static 'main/src/icons/icon-search.png' %}' alt='SEO' class='slogan-icon'>&nbsp; Search engine optimization for maximized exposure</a>",
+    ];
+
+    setTimeout(function() {
+      var slogan = document.getElementById('slogan-1');
+      slogan.setAttribute('class', 'animated fadeOutRight');
+      setTimeout(function() {
+        slogan.innerHTML = text[i];
+        slogan.setAttribute('class', 'animated fadeInLeft');
+      }, 100);
+      if (i < (text.length - 1)) {
+        i++;
+      } else {
+        i = 0;
+      }
+      timeout(i);
+    }, 6500);
+  };
+
+  timeout(-1);
+</script>
 {% endblock %}

@@ -7,8 +7,10 @@ const { VueLoaderPlugin } = require('vue-loader');
 module.exports = {
   context: __dirname,
   entry: {
-    index: './src/scripts/index.js',
-    animate: './src/scripts/animate-module.js'
+    // index: './src/scripts/index.js',
+    animate: './src/scripts/animate-module.js',
+    styles: './src/scripts/styles-module.js',
+    externals: './src/scripts/externals-module.js',
   },
   output: {
     path: path.resolve('./dist/scripts/'),
@@ -23,7 +25,14 @@ module.exports = {
   },
   optimization: {
     minimizer: [new UglifyJsPlugin({
-      include: /\.js$/,
+      cache: true,
+        parallel: true,
+        uglifyOptions: {
+          compress: false,
+          ecma: 6,
+          mangle: true
+        },
+        sourceMap: true
     })]
   },
   plugins: [

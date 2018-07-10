@@ -1,4 +1,5 @@
 {% extends 'main/base.html' %}
+{% load static %}
 
 {% block meta-description %}
   <meta name="description" content="Holmes Web Development services: web development, UX & UI, web application development, progressive web apps, logo's and branding and SEO (search engine optimisation).">
@@ -28,31 +29,31 @@
         <p>I offer various services designed to cater to the needs of businesses or individuals in need of websites.</p>
         <ul class="collapsible z-depth-0">
           <li class="active">
-            <h2 class="font-2 collapsible-header bright-blue-text"><img src="https://png.icons8.com/ios/50/434343/source-code.png" class="services-icon"> Web development</h2>
+            <h2 class="font-2 collapsible-header bright-blue-text"><img src="{% static 'main/src/icons/icon-coding.png' %}" alt="web design" class="services-icon"> Web development</h2>
               <div class="collapsible-body"><p>The most fundamental service is basic web development, ideal for brochure sites or portfolio-based websites, crucial for any business to showcase itself effectively.</p></div>
           </li>
           <li>
-            <h2 class="font-2 collapsible-header bright-blue-text"><img src="https://png.icons8.com/ios/50/434343/accessibility2.png" class="services-icon"> UX & UI</h2>
+            <h2 class="font-2 collapsible-header bright-blue-text"><img src="{% static 'main/src/icons/icon-ux.png' %}" alt="UX and UI" class="services-icon"> UX & UI</h2>
               <div class="collapsible-body"><p>Linked closely with web development, user interface and user experience design involve creating a website that follows proper design practices in order to create an enjoyable and intuitive experience for the user. This includes aspects such as visual design, responsive design and typography.</p></div>
           </li>
           <li>
-            <h2 class="font-2 collapsible-header bright-blue-text"><img src="https://png.icons8.com/ios/50/434343/database.png" class="services-icon"> Web application development</h2>
+            <h2 class="font-2 collapsible-header bright-blue-text"><img src="{% static 'main/src/icons/icon-database.png' %}" alt='Web application design' class="services-icon"> Web application development</h2>
               <div class="collapsible-body"><p>The web application is a more advanced type of website which offers the user a more interactive and "app-like" experience. Web applications generally rely on the retrieval of information from a database. This allows for a more customizable and powerful experience.</p></div>
           </li>
           <li>
-            <h2 class="font-2 collapsible-header bright-blue-text"><img src="https://png.icons8.com/ios/50/434343/comments.png" class="services-icon"> Content management systems</h2>
+            <h2 class="font-2 collapsible-header bright-blue-text"><img src="{% static 'main/src/icons/icon-blog.png' %}" alt="CMS" class="services-icon"> Content management systems</h2>
               <div class="collapsible-body"><p>Content management systems  provide a user-friendly interface that allows users, owners and administrators to easily create displayable content for a website. Most blogs use content management systems, as content creators can manage their content without any web development knowledge.</p></div>
           </li>
           <li>
-            <h2 class="font-2 collapsible-header bright-blue-text"><img src="https://png.icons8.com/ios/50/434343/combo-chart.png" class="services-icon"> Data visualisation</h2>
+            <h2 class="font-2 collapsible-header bright-blue-text"><img src="{% static 'main/src/icons/icon-graph.png' %}" alt="D3.js" class="services-icon"> Data visualisation</h2>
               <div class="collapsible-body"><p>Data visualisation allows data to be displayed in unique and customizable ways, making data more significantly more interesting than plain text. For examples of interesting data visualisations, visit the <a href="https://github.com/d3/d3/wiki/Gallery">D3 gallery</a> </p>.</div>
           </li>
           <li>
-            <h2 class="font-2 collapsible-header bright-blue-text"><img src="https://png.icons8.com/ios/50/434343/visible.png" class="services-icon"> Logo design</h2>
+            <h2 class="font-2 collapsible-header bright-blue-text"><img src="{% static 'main/src/icons/icon-eye.png' %}" alt="logo design" class="services-icon"> Logo design</h2>
               <div class="collapsible-body"><p>Eye-catching and expressive logos are important for the establishment of a business's brand image. Following visual design and logo design guidelines, I provide logo designs with the purpose of creating a memorable brand image.</p></div>
           </li>
           <li>
-            <h2 class="font-2 collapsible-header bright-blue-text"><img src="https://png.icons8.com/ios/50/434343/search.png" class="services-icon"> Search engine optimisation (SEO)</h2>
+            <h2 class="font-2 collapsible-header bright-blue-text"><img src="{% static 'main/src/icons/icon-search.png' %}" alt='SEO' class="services-icon"> Search engine optimisation (SEO)</h2>
               <div class="collapsible-body"><p>Search engine optimisation is the process of optimising a website through multiple adjustments for the purpose of ranking a website higher in search engine results. This generates more traffic from users, as the website is made significantly more available to the public.</p></div>
           </li>
         </ul>
