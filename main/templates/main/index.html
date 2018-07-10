@@ -18,8 +18,12 @@
 <script type="text/javascript">
   var timeout = function(i) {
     var text = [
+      "<a href='{% url 'main:services' %}' class='charcoal-text'><img src='{% static 'main/src/icons/icon-coding.png' %}' alt='web design' class='slogan-icon'>&nbsp; High-quality, bespoke website design</a>",
+
       "<a href='{% url 'main:services' %}' class='charcoal-text'><img src='{% static 'main/src/icons/icon-ux.png' %}' alt='UX and UI' class='slogan-icon'>&nbsp; Attractive and intuitive UI and UX design</a>",
+
       "<a href='{% url 'main:services' %}' class='charcoal-text'><img src='{% static 'main/src/icons/icon-database.png' %}' alt='Web application design' class='slogan-icon'>&nbsp; Robust, performant web application development</a>",
+      
       "<a href='{% url 'main:services' %}' class='charcoal-text'><img src='{% static 'main/src/icons/icon-search.png' %}' alt='SEO' class='slogan-icon'>&nbsp; Search engine optimization for maximized exposure</a>",
     ];
 
@@ -39,6 +43,6 @@
     }, 6500);
   };
 
-  timeout(-1);
+  timeout(0);
 </script>
 {% endblock %}
