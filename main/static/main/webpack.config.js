@@ -16,7 +16,7 @@ module.exports = {
     path: path.resolve('./dist/scripts/'),
     filename: '[name].bundle.js',
   },
-  mode: "production",
+  mode: 'production',
   // Vue doesn't work unless this is present
   resolve: {
   alias: {
