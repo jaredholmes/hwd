@@ -20,7 +20,8 @@ module.exports = {
   // Vue doesn't work unless this is present
   resolve: {
   alias: {
-    vue: 'vue/dist/vue.js'
+    // vue: 'vue/dist/vue.js'
+    vue: 'vue/dist/vue.common.js'
     }
   },
   optimization: {
