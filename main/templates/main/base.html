@@ -8,7 +8,7 @@
   {% block meta-description %}
     <meta name="description" content="Holmes Web Development offers various web design and development services aimed at accelerating business growth online.">
   {% endblock %}
-  <meta name="theme-color" content="#424242">
+  <meta name="theme-color" content="#007677">
   {% load static %}
   <link rel="icon" type="image/png" href="{% static 'main/src/images/favicon.png' %}">
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,400" rel="stylesheet">
@@ -56,26 +56,17 @@
     <main class="main container row">
       {% block main %}
       <div class="cont-block" id="cont-block-1">
-        <h2 class="font-2 bright-blue-text">An Introduction</h2>
+        <h2 class="font-2 bright-blue-text">Overview</h2>
         <div class="cont-paragraph" id="cont-paragraph-1">
           <p>I'm a freelance web developer based in Johannesburg, South Africa. My main interest lies in front-end web design, which allows me to create clean and charming websites aimed at communicating the personality of the business behind the website.</p>
 
-          <p>If you need a website to showcase all that you have to offer through the world's most powerful and flexible medium, you have come to the right place.</p>
+          <p>If you need a website to showcase all that you have to offer through the world's most powerful and flexible medium, you have come to the right place. For a more detailed breakdown of what I do, <a href="{% url 'main:services' %}">visit the services page</a>.</p>
         </div>
       </div>
 
       <div class="cont-block" id="cont-block-2">
-        <h2 class="font-2 bright-blue-text">What I Do</h2>
-        <div class="cont-paragraph" id="cont-paragraph-2">
-          <p>I offer a variety of services, aimed at accelerating the reach and development of businesses and startups using the web, the most useful and dynamic technology for communication.</p>
-
-          <p>For a more detailed breakdown of what I do, <a href="{% url 'main:services' %}">visit the services page</a>.</p>
-        </div>
-      </div>
-
-      <div class="cont-block" id="cont-block-3">
         <h2 class="font-2 bright-blue-text">Need a Website?</h2>
-        <div class="cont-paragraph" id="cont-paragraph-3">
+        <div class="cont-paragraph" id="cont-paragraph-2">
           <p>I'd love to help showcase you to the world. To get started, you can find my contact details or send me a message <a href="{% url 'main:contact' %}">here</a>.</p>
         </div>
       </div>
