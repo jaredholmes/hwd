@@ -7,7 +7,7 @@ const { VueLoaderPlugin } = require('vue-loader');
 module.exports = {
   context: __dirname,
   entry: {
-    // index: './src/scripts/index.js',
+    index: './src/scripts/index.js',
     animate: './src/scripts/animate-module.js',
     styles: './src/scripts/styles-module.js',
     externals: './src/scripts/externals-module.js',

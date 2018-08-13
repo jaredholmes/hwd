@@ -22,9 +22,10 @@
   <link rel="icon" type="image/png" href="{% static 'main/src/images/favicon.png' %}">
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,400" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+  <link rel="manifest" href="{% static 'main/src/manifest/manifest.json'%}">
   {% block extra-links %}
   {% endblock %}
-  <title>{% block title %}Website and Web Application Development | Holmes Web Development{% endblock%}</title>
+  <title>{% block title %}Holmes Web Development | Website and Web Application Development{% endblock%}</title>
 </head>
 {% render_bundle 'styles' %}
 <body class="font-1 light-grey charcoal-text">
@@ -104,6 +105,11 @@
       </div>
     </footer>
   </div>
+  <script type="text/javascript">
+    const sw = "{% static 'main/sw.js' %}";
+  </script>
+
+  {% render_bundle 'index' %}
   {% render_bundle 'externals' %}
   {% block extra-scripts %}
   {% endblock %}
