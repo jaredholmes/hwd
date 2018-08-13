@@ -8,22 +8,22 @@
   "theme_color": "#007677",
   "icons": [
     {
-      "src": "http://www.holmeswebdev.com/static/main/static/src/images/logo.png",
+      "src": "https://www.holmeswebdev.com/static/main/src/images/logo.png",
       "sizes": "96x96",
       "type": "image/png"
     },
     {
-      "src": "http://www.holmeswebdev.com/static/main/static/src/images/logo.png",
+      "src": "https://www.holmeswebdev.com/static/main/src/images/logo.png",
       "sizes": "144x144",
       "type": "image/png"
     },
     {
-      "src": "http://www.holmeswebdev.com/static/main/static/src/images/logo.png",
+      "src": "https://www.holmeswebdev.com/static/main/src/images/logo.png",
       "sizes": "256x256",
       "type": "image/png"
     },
     {
-      "src": "http://www.holmeswebdev.com/static/main/static/src/images/logo.png",
+      "src": "https://www.holmeswebdev.com/static/main/src/images/logo.png",
       "sizes": "512x512",
       "type": "image/png"
     }
