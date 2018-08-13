@@ -12,7 +12,7 @@ self.addEventListener('install', function(event) {
 });
 
 self.addEventListener('activate', () => {
-  console.log('Activated');
+  // console.log('Activated');
 });
 
 self.addEventListener('fetch', (event) => {

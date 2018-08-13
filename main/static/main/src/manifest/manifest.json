@@ -1,7 +1,7 @@
 {
   "name": "Holmes Web Development | Website and Web Application Development",
   "short_name": "HWD",
-  "start_url": ".",
+  "start_url": "/",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#007677",
