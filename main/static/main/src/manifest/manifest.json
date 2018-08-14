@@ -1,29 +1,29 @@
 {
-  "name": "Holmes Web Development | Website and Web Application Development",
+  "name": "Holmes Web Development",
   "short_name": "HWD",
   "start_url": "/",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#007677",
+  "background_color": "#efefef",
   "theme_color": "#007677",
   "icons": [
     {
-      "src": "https://www.holmeswebdev.com/static/main/src/images/logo.png",
+      "src": "https://www.holmeswebdev.com/static/main/src/icons/logo/logo-96.png",
       "sizes": "96x96",
       "type": "image/png"
     },
     {
-      "src": "https://www.holmeswebdev.com/static/main/src/images/logo.png",
+      "src": "https://www.holmeswebdev.com/static/main/src/icons/logo/logo-144.png",
       "sizes": "144x144",
       "type": "image/png"
     },
     {
-      "src": "https://www.holmeswebdev.com/static/main/src/images/logo.png",
+      "src": "https://www.holmeswebdev.com/static/main/src/icons/logo/logo-256.png",
       "sizes": "256x256",
       "type": "image/png"
     },
     {
-      "src": "https://www.holmeswebdev.com/static/main/src/images/logo.png",
+      "src": "https://www.holmeswebdev.com/static/main/src/icons/logo/logo-512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
