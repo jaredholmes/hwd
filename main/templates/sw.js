@@ -27,6 +27,7 @@ self.addEventListener('install', function(event) {
         'https://www.holmeswebdev.com/static/main/src/icons/icon-name.png',
         'https://www.holmeswebdev.com/static/main/src/icons/icon-pencil.png',
         'https://www.holmeswebdev.com/static/main/src/icons/icon-search.png',
+        'https://www.holmeswebdev.com/static/main/src/icons/icon-send.png',
         'https://www.holmeswebdev.com/static/main/src/icons/icon-smartphone.png',
         'https://www.holmeswebdev.com/static/main/src/icons/icon-ux.png',
         'https://www.holmeswebdev.com/static/main/src/icons/logo/logo-96.png',
