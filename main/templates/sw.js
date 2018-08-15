@@ -11,9 +11,8 @@ self.addEventListener('install', function(event) {
         'https://www.holmeswebdev.com/static/main/dist/scripts/externals.bundle.js',
         'https://www.holmeswebdev.com/static/main/dist/scripts/index.bundle.js',
         'https://www.holmeswebdev.com/static/main/dist/scripts/styles.bundle.js',
-        //CDN's
+        //CDNs
         'https://fonts.googleapis.com/css?family=Raleway:300,400',
-        'https://use.fontawesome.com/releases/v5.0.13/css/all.css',
         // Static files
         'https://www.holmeswebdev.com/static/main/src/images/logo.png',
         'https://www.holmeswebdev.com/static/main/src/images/favicon.png',
@@ -21,10 +20,14 @@ self.addEventListener('install', function(event) {
         'https://www.holmeswebdev.com/static/main/src/icons/icon-blog.png',
         'https://www.holmeswebdev.com/static/main/src/icons/icon-coding.png',
         'https://www.holmeswebdev.com/static/main/src/icons/icon-database.png',
+        'https://www.holmeswebdev.com/static/main/src/icons/icon-email.png',
         'https://www.holmeswebdev.com/static/main/src/icons/icon-eye.png',
         'https://www.holmeswebdev.com/static/main/src/icons/icon-graph.png',
         'https://www.holmeswebdev.com/static/main/src/icons/icon-menu.png',
+        'https://www.holmeswebdev.com/static/main/src/icons/icon-name.png',
+        'https://www.holmeswebdev.com/static/main/src/icons/icon-pencil.png',
         'https://www.holmeswebdev.com/static/main/src/icons/icon-search.png',
+        'https://www.holmeswebdev.com/static/main/src/icons/icon-smartphone.png',
         'https://www.holmeswebdev.com/static/main/src/icons/icon-ux.png',
         'https://www.holmeswebdev.com/static/main/src/icons/logo/logo-96.png',
         'https://www.holmeswebdev.com/static/main/src/icons/logo/logo-144.png',
