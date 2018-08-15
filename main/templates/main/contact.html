@@ -1,11 +1,8 @@
 {% extends 'main/base.html' %}
+{% load static %}
 
 {% block meta-description %}
   <meta name="description" content="Holmes Web Development offers various web design and development services aimed at accelerating business growth online.">
-{% endblock %}
-
-{% block extra-links %}
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 {% endblock %}
 
 {% block title %}Contact Details and Pricing | Holmes Web Development{% endblock %}
@@ -39,17 +36,17 @@
   <form class="new-message" action="" method="post">
     {% csrf_token %}
       <div class="form-area input-field">
-        <i class="far fa-user-circle prefix"></i>
+        <img src="{% static 'main/src/icons/icon-name.png' %}" alt="Name" class="contact-icon prefix">
         <label for="id_name">Name </label>
         {{ form.sender_name }}
       </div>
       <div class="form-area input-field">
-        <i class="fas fa-at prefix"></i>
+        <img src="{% static 'main/src/icons/icon-email.png' %}" alt="Email" class="contact-icon prefix">
         <label for="id_email">Email address </label>
         {{ form.sender_email }}
       </div>
       <div class="form-area input-field">
-        <i class="fas fa-pencil-alt prefix"></i>
+        <img src="{% static 'main/src/icons/icon-pencil.png' %}" alt="Message" class="contact-icon prefix">
         <label for="id_message">Your message </label>
         {{ form.message }}
       </div>
