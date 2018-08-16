@@ -1,4 +1,5 @@
 import os
+import ssl
 from datetime import datetime
 
 from django.shortcuts import render
@@ -11,9 +12,7 @@ from sendgrid.helpers.mail import *
 from .forms import MessageForm
 from .models import Message
 
-import ssl
-
-ssl._create_default_https_context = ssl._create_unverified_context
+#ssl._create_default_https_context = ssl._create_unverified_context
 
 # Create your views here.
 
