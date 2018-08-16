@@ -1,11 +1,19 @@
+import os
 from datetime import datetime
 
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
-from django.core.mail import send_mail
+# from django.core.mail import send_mail
+
+import sendgrid
+from sendgrid.helpers.mail import *
 
 from .forms import MessageForm
 from .models import Message
+
+import ssl
+
+ssl._create_default_https_context = ssl._create_unverified_context
 
 # Create your views here.
 
@@ -44,17 +52,30 @@ Email: %s \n\n
 
                 content = m.message
 
-                try:
-                    send_mail(
-                        subject,
-                        (intro + content),
-                        'jar3dh0lm3s@gmail.com',
-                        ['jared@colgro.com'],
-                        fail_silently=False
-                )
-                except:
-                    return render(request, 'main/contact-failed.html', context = { 'form' : form })
-                return render(request, 'main/contact-thanks.html', context = { 'form' : form })
+                # try:
+                #     send_mail(
+                #         subject,
+                #         (intro + content),
+                #         'jar3dh0lm3s@gmail.com',
+                #         ['jared@colgro.com'],
+                #         fail_silently=False
+                # )
+                # except:
+                #     return render(request, 'main/contact-failed.html', context = { 'form' : form })
+                # return render(request, 'main/contact-thanks.html', context = { 'form' : form })
+
+                sg = sendgrid.SendGridAPIClient(apikey=os.environ.get('SENDGRID_API_KEY'))
+                from_email = Email('jared@colgro.com')
+                to_email = Email('jared@colgro.com')
+                email_subject = subject
+                email_content = Content('text/plain', intro + content)
+                mail = Mail(from_email, email_subject, to_email, email_content)
+                response = sg.client.mail.send.post(request_body=mail.get())
+
+                if response.status_code == 202:
+                    return render(request, 'main/contact-thanks.html', context = { 'form' : form })
+                else:
+                    return render(request, 'main/contact-thanks.html', context = { 'form' : form })
 
     else: form = MessageForm()
 
